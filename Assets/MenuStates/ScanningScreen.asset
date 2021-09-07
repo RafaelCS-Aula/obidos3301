@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5bd7ac66e35a7bf4baf1f1225641a05e, type: 3}
-  m_Name: DefaultMainScreen
+  m_Name: ScanningScreen
   m_EditorClassIdentifier: 
   SideButtonTargetState: {fileID: 11400000, guid: 395f45594330584468c270e640ba645c, type: 2}
-  _topRightText: 'Score: [Score]'
-  _topLeftText: 'Agent: [Name]'
-  _centerButtonText: Scan QR
-  _centerButtonTargetState: {fileID: 11400000, guid: 9870157111dd08c40b7b462af8b89f20, type: 2}
+  _topRightText: Agent Scanning
+  _topLeftText: Score Scanning
+  _centerButtonText: back to map
+  _centerButtonTargetState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
   _screenInteractable: {fileID: 0}
