@@ -6,6 +6,8 @@ using UnityEngine.UIElements;
 public class ScreenStateUpdater : MonoBehaviour
 {
 
+    public string playerName = "";
+    public int playerScore = 0;
     public UIDocument MainControlMenuDocument;
     public UIDocument DialogueMenuDocument;
 
@@ -76,9 +78,9 @@ public class ScreenStateUpdater : MonoBehaviour
             centralButton.clicked -= OnCenterButtonClicked;
             centralButton.clicked += OnCenterButtonClicked;
 
-            topLeftLabel.text = explicitMainState.TopLeftText;
-            topRightLabel.text = explicitMainState.TopRightText;
-            centralButtonLabel.text = explicitMainState.CenterButtonText;
+            topLeftLabel.text = ParseTextVariables(explicitMainState.TopLeftText);
+            topRightLabel.text = ParseTextVariables(explicitMainState.TopRightText);
+            centralButtonLabel.text = ParseTextVariables(explicitMainState.CenterButtonText);
 
             break;
 
@@ -95,7 +97,7 @@ public class ScreenStateUpdater : MonoBehaviour
             Label dialogue = _dialogueRoot.Q<Label>(_dialogueLabelName);
 
             //Assing the contents
-            dialogue.text = explicitDialogueState.DialogueText;
+            dialogue.text = ParseTextVariables(explicitDialogueState.DialogueText);
             
      
             sideButton.clicked -= OnSideButtonClicked;
@@ -117,5 +119,15 @@ public class ScreenStateUpdater : MonoBehaviour
     private void OnCenterButtonClicked() => LoadNewMenu(
         (_currentState as MainControlScreenState).CenterButtonNewState);
 
+    private string ParseTextVariables(string originalText)
+    {
+        string playerNameVariable = ">player";
+        string playerScoreVariable = ">score";
+
+        string finalText = originalText.Replace(playerNameVariable, playerName);
+        finalText = finalText.Replace(playerScoreVariable,playerScore.ToString());
+
+        return finalText;
+    }
     
 }

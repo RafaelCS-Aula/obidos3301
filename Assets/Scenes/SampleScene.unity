@@ -342,6 +342,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1c129ffa9b6745a346cde0023908b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerName: benny
+  playerScore: 0
   MainControlMenuDocument: {fileID: 1167439682}
   DialogueMenuDocument: {fileID: 143851464}
   _initialState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}

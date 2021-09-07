@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DefaultMainScreen
   m_EditorClassIdentifier: 
   SideButtonTargetState: {fileID: 11400000, guid: 395f45594330584468c270e640ba645c, type: 2}
-  _topRightText: 'Score: [Score]'
-  _topLeftText: 'Agent: [Name]'
+  _topRightText: 'Score: >score'
+  _topLeftText: 'Agent: >player'
   _centerButtonText: Scan QR
   _centerButtonTargetState: {fileID: 11400000, guid: 9870157111dd08c40b7b462af8b89f20, type: 2}
   _screenInteractable: {fileID: 0}
