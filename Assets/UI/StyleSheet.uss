@@ -1,0 +1,105 @@
+.unity-label {
+    background-color: rgb(253, 221, 211);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    border-left-color: rgb(22, 7, 0);
+    border-right-color: rgb(22, 7, 0);
+    border-top-color: rgb(22, 7, 0);
+    border-bottom-color: rgb(22, 7, 0);
+    border-left-width: 3px;
+    border-right-width: 3px;
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    font-size: 14%;
+}
+
+.unity-text-element {
+    color: rgb(0, 0, 0);
+    font-size: 12%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.unity-button {
+    background-color: rgb(255, 87, 11);
+    border-left-color: rgb(34, 15, 0);
+    border-right-color: rgb(34, 15, 0);
+    border-top-color: rgb(34, 15, 0);
+    border-bottom-color: rgb(34, 15, 0);
+}
+
+.unity-button:hover {
+    background-color: rgb(255, 128, 71);
+    border-left-color: rgb(34, 15, 0);
+    border-right-color: rgb(34, 15, 0);
+    border-top-color: rgb(34, 15, 0);
+    border-bottom-color: rgb(34, 15, 0);
+}
+
+.unity-button:active {
+    background-color: rgb(24, 11, 1);
+    border-left-color: rgb(34, 15, 0);
+    border-right-color: rgb(34, 15, 0);
+    border-top-color: rgb(34, 15, 0);
+    border-bottom-color: rgb(34, 15, 0);
+}
+
+.agent-button-style {
+    background-image: url('/Assets/secret_agent.png');
+    background-color: rgb(255, 87, 11);
+    height: 25%;
+    width: 100%;
+    top: 33%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-slice-left: 0;
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+}
+
+.agent-button-style:hover {
+    background-image: url('/Assets/secret_agent.png');
+    background-color: rgb(255, 123, 11);
+    height: 25%;
+    width: 100%;
+    top: 33%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-slice-left: 0;
+    -unity-background-image-tint-color: rgb(123, 109, 91);
+}
+
+.agent-button-style:active {
+    background-image: url('/Assets/secret_agent.png');
+    background-color: rgb(255, 206, 155);
+    height: 25%;
+    width: 100%;
+    top: 33%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    -unity-background-scale-mode: scale-and-crop;
+    -unity-slice-left: 0;
+    -unity-background-image-tint-color: rgb(123, 109, 91);
+}
