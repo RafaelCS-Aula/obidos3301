@@ -5,6 +5,15 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "NewMainControlScreen", menuName = "MenuState/MainControlScreen", order = 0)]
 public sealed class MainControlScreenState : MenuState
 {
+
+    public MainControlScreenState(string topRight, string topLeft, string centerText, MenuState centerState, GameObject interactable)
+    {
+        _topRightText = topRight;
+        _topLeftText = topLeft;
+        _centerButtonText = centerText;
+        _centerButtonTargetState = centerState;
+        _screenInteractable = interactable;
+    }
     public override EMenuTypes MenuType{get => EMenuTypes.MAINCONTROL;}
 
     [SerializeField] private string _topRightText;
