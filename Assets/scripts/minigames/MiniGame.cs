@@ -9,6 +9,19 @@ public abstract class MiniGame : MonoBehaviour
 
     public Treasure treasureReward;
 
+    public MiniGame nextGame;
+
     public UnityEvent OnGameComplete;
  
+    protected virtual void WinGame()
+    {
+        if(treasureReward != null)
+        {
+            PlayerManager.Manager.UnlockTreasure(treasureReward);
+        }
+        else
+        {
+            ScreenStateUpdater.Manager.SwitchInteractable(nextGame.gameObject);
+        }        
+    }
 }

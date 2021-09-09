@@ -36,6 +36,8 @@ public class ScreenStateUpdater : MonoBehaviour
 
 
 
+    private GameObject _currentInteractable;
+
     private void OnEnable() 
     {
         if(Manager == null)
@@ -80,6 +82,7 @@ public class ScreenStateUpdater : MonoBehaviour
             Label topLeftLabel = _mainRoot.Q<Label>(_topLeftLabelName);
             Label topRightLabel = _mainRoot.Q<Label>(_topRightLabelName);
             Label centralButtonLabel = _mainRoot.Q<Label>(_centralButtonLabelName);
+            
 
             // Assign the contents
             sideButton.clicked -= OnSideButtonClicked;
@@ -91,6 +94,9 @@ public class ScreenStateUpdater : MonoBehaviour
             topLeftLabel.text = ParseTextVariables(explicitMainState.TopLeftText);
             topRightLabel.text = ParseTextVariables(explicitMainState.TopRightText);
             centralButtonLabel.text = ParseTextVariables(explicitMainState.CenterButtonText);
+            
+            GameObject interactable = explicitMainState.ScreenInteractable;
+            _currentInteractable = Instantiate(interactable,Vector2.zero,Quaternion.identity);
 
             break;
 
@@ -118,6 +124,11 @@ public class ScreenStateUpdater : MonoBehaviour
         }
     }
 
+    public void SwitchInteractable(GameObject newInteractable)
+    {
+        Destroy(_currentInteractable);
+        _currentInteractable = Instantiate(newInteractable,Vector2.zero,Quaternion.identity);
+    }
     private void OnSideButtonClicked()
     {
         if(_currentState.SideButtonTargetState != null)
