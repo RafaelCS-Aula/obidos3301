@@ -15,8 +15,12 @@ public class PlaceObjectInSlotMiniGame : MiniGame
     public GameObject objectToPut;
     private bool _objectInSlot = false;
 
+    private void Start() {
+        SetupGame();
+    }
     public override void SetupGame()
     {
+        slotColldier.gameObject.transform.position = Vector2.zero;
         int spot = Random.Range(0, possibleObjectStarts.Length - 1);
         objectToPut.transform.position = possibleObjectStarts[spot];
 
