@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 63678340}
   - component: {fileID: 63678342}
   - component: {fileID: 63678341}
+  - component: {fileID: 63678344}
   m_Layer: 0
   m_Name: QR-code-example
   m_TagString: Untagged
@@ -179,7 +180,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.4033333, y: 1.4033333}
+  m_Size: {x: 1.4, y: 1.4}
   m_EdgeRadius: 0
 --- !u!212 &63678342
 SpriteRenderer:
@@ -232,6 +233,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &63678344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 63678339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c99b19a8d005d847abe0242703f0058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &143851463
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,7 +453,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.2, y: 0.2}
   m_EdgeRadius: 0
 --- !u!212 &940870204
 SpriteRenderer:
@@ -563,8 +576,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1447558604}
   - component: {fileID: 1447558603}
+  - component: {fileID: 1447558605}
   m_Layer: 0
-  m_Name: ScreenManager
+  m_Name: Managers
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -582,8 +596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbb1c129ffa9b6745a346cde0023908b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerName: benny
-  playerScore: 0
   MainControlMenuDocument: {fileID: 1167439682}
   DialogueMenuDocument: {fileID: 143851464}
   _initialState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
@@ -601,6 +613,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1447558605
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1447558602}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b56c2ae38965574cb2be227744c90cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: 0
+  playerName: Obama
+  InventoryMenuState: {fileID: 0}
 --- !u!1 &1530290582
 GameObject:
   m_ObjectHideFlags: 0
@@ -610,6 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1530290583}
+  - component: {fileID: 1530290584}
   m_Layer: 0
   m_Name: QRCodeScanMinigame
   m_TagString: Untagged
@@ -633,3 +661,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1530290584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1530290582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ccf54ffe7802054a80611b1d46c7c7a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  treasureReward: {fileID: 0}
+  OnGameComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  possibleObjectStarts:
+  - {x: -2.03, y: 0}
+  - {x: 2.09, y: 0}
+  - {x: -1.92, y: -1.97}
+  - {x: 1.65, y: 2.1}
+  - {x: -1.97, y: 1.9}
+  onSpotTolerance: 0.5
+  slotColldier: {fileID: 940870203}
+  objectToPut: {fileID: 63678339}

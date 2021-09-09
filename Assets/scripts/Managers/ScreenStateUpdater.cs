@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
+
 public class ScreenStateUpdater : MonoBehaviour
 {
-
-    public string playerName = "";
-    public int playerScore = 0;
+    public static ScreenStateUpdater Manager;
     public UIDocument MainControlMenuDocument;
     public UIDocument DialogueMenuDocument;
 
@@ -39,6 +38,17 @@ public class ScreenStateUpdater : MonoBehaviour
 
     private void OnEnable() 
     {
+        if(Manager == null)
+            Manager = this;
+        if(Manager != this)
+        {
+            Destroy(Manager.gameObject);
+            Manager = this;
+        }
+        
+        
+        DontDestroyOnLoad(this.gameObject);
+
         if(MainControlMenuDocument == null || DialogueMenuDocument == null)
         {
             Debug.Log("UI Document component missing - assign it to inspector");
@@ -124,8 +134,8 @@ public class ScreenStateUpdater : MonoBehaviour
         string playerNameVariable = ">player";
         string playerScoreVariable = ">score";
 
-        string finalText = originalText.Replace(playerNameVariable, playerName);
-        finalText = finalText.Replace(playerScoreVariable,playerScore.ToString());
+        string finalText = originalText.Replace(playerNameVariable, PlayerManager.Manager.playerName);
+        finalText = finalText.Replace(playerScoreVariable,PlayerManager.Manager.playerScore.ToString());
 
         return finalText;
     }
