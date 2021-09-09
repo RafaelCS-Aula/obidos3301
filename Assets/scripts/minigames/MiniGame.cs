@@ -13,6 +13,7 @@ public abstract class MiniGame : MonoBehaviour
 
     public UnityEvent OnGameComplete;
  
+    public KeyCode instantWinKey = KeyCode.P;
     protected virtual void WinGame()
     {
         if(treasureReward != null)
@@ -23,5 +24,12 @@ public abstract class MiniGame : MonoBehaviour
         {
             ScreenStateUpdater.Manager.SwitchInteractable(nextGame.gameObject);
         }        
+    }
+
+    protected virtual void Update() {
+        if(Input.GetKeyDown(instantWinKey))
+        {
+            WinGame();
+        }
     }
 }
