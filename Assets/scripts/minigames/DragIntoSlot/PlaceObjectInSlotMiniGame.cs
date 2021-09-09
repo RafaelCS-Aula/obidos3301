@@ -47,7 +47,7 @@ public class PlaceObjectInSlotMiniGame : MiniGame
 
         if(_toleranceCounter > onSpotTolerance)
         {
-            OnGameComplete.Invoke();
+            WinGame();
             print("Game won");
         }
             

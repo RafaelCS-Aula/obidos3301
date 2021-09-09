@@ -9,7 +9,7 @@ public abstract class MiniGame : MonoBehaviour
 
     public Treasure treasureReward;
 
-    public MiniGame nextGame;
+    public MenuState nextGame;
 
     public UnityEvent OnGameComplete;
  
@@ -22,7 +22,10 @@ public abstract class MiniGame : MonoBehaviour
         }
         else
         {
-            ScreenStateUpdater.Manager.SwitchInteractable(nextGame.gameObject);
+            //ScreenStateUpdater.Manager.SwitchOnScreenInteractable(nextGame.gameObject);
+
+            ScreenStateUpdater.Manager.LoadNewMenu(nextGame);
+            print("Switching minigame");
         }        
     }
 

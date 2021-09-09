@@ -10,7 +10,8 @@ public class PlayerManager : MonoBehaviour
 
     public string playerName = "Obama";
 
-    public IList<Treasure> fullTreasureInventory = new Treasure[20];
+    
+    public Treasure[] fullTreasureInventory = new Treasure[20];
 
     public MenuState InventoryMenuState;
 
@@ -40,18 +41,18 @@ public class PlayerManager : MonoBehaviour
             // This treasure is registred in the inventory
             if(t.TreasureName == treasure.TreasureName)
             {
-                
+                string displayedText = ""; 
                 if(!t.Unlocked)
                 {
                     // Anything special to happen on a new unlock?
                     playerScore += t.ScoreValue;
-
+                    displayedText += "UNLOCKED: "+ t.TreasureName + " \n";
                     t.Unlocked = true;
                     t.Hidden = false;
 
                 }
-                
-                ScreenStateUpdater.Manager.LoadNewMenu( new DialogueScreenState(t.TreasureLore, t.TreasurePregab,InventoryMenuState));
+                displayedText += t.TreasureLore;
+                ScreenStateUpdater.Manager.LoadNewMenu( new DialogueScreenState(displayedText, t.TreasurePregab,InventoryMenuState));
 
                 return;
             }

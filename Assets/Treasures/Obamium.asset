@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreVale: 200
   _treasureName: Obamium
-  _treasureLore: 
+  _treasureLore: Now let me be clear.
   _treasureIcon: {fileID: 0}
-  _treasurePrefab: {fileID: 0}
-  Unlocked: 0
+  _treasurePrefab: {fileID: 6890483525973153206, guid: 1995ab57a5b0e6d4ab3275ac747fca8d, type: 3}
+  Unlocked: 1
   Hidden: 0

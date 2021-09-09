@@ -22,7 +22,7 @@ public class RotateWithMouse : MonoBehaviour
     {
         rb.AddTorque(Vector3.up * torque * -Input.GetAxis("Mouse X"));
  
-        rb.AddTorque(transform.right * torque * Input.GetAxis("Mouse Y"));
+        rb.AddTorque(Vector3.right * torque * Input.GetAxis("Mouse Y"));
 
         print("SPIN");
     }

@@ -17,4 +17,4 @@ MonoBehaviour:
   _topLeftText: Score Scanning
   _centerButtonText: back to map
   _centerButtonTargetState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
-  _screenInteractable: {fileID: 0}
+  _screenInteractable: {fileID: 8679611619845107037, guid: 281025b0fae27034eb9ea9c252bc27f2, type: 3}

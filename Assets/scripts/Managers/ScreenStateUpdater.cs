@@ -66,7 +66,10 @@ public class ScreenStateUpdater : MonoBehaviour
         Button sideButton;
         _previousState = _currentState;
         _currentState = newState;
-        
+
+        if(_currentInteractable != null)
+            Destroy(_currentInteractable.gameObject);
+
         switch(_currentState.MenuType)
         {
             case EMenuTypes.MAINCONTROL:
@@ -120,13 +123,18 @@ public class ScreenStateUpdater : MonoBehaviour
      
             sideButton.clicked -= OnSideButtonClicked;
             sideButton.clicked += OnSideButtonClicked;
+
+            GameObject dialogueAvatar = explicitDialogueState.SpeakerAvatar;
+
+            if(dialogueAvatar != null)
+                _currentInteractable = Instantiate(dialogueAvatar,Vector2.zero,Quaternion.identity);
             
 
             break;
         }
     }
 
-    public void SwitchInteractable(GameObject newInteractable)
+    public void SwitchOnScreenInteractable(GameObject newInteractable)
     {
         if(_currentInteractable != null)
             Destroy(_currentInteractable);
