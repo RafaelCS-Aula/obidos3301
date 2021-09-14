@@ -38,7 +38,7 @@ public class ScreenStateUpdater : MonoBehaviour
 
     private GameObject _currentInteractable = null;
 
-    private void OnEnable() 
+    private void Start() 
     {
         if(Manager == null)
             Manager = this;
@@ -153,13 +153,20 @@ public class ScreenStateUpdater : MonoBehaviour
 
     private string ParseTextVariables(string originalText)
     {
+        if(originalText == null)
+            return ".........";
         string playerNameVariable = ">player";
         string playerScoreVariable = ">score";
+        string treasuresUnlockedVariable = ">t_unlock";
+        string treasuresTotalVariable = ">t_total";
 
         string finalText = originalText.Replace(playerNameVariable, PlayerManager.Manager.playerName);
         finalText = finalText.Replace(playerScoreVariable,PlayerManager.Manager.playerScore.ToString());
-
+        finalText = finalText.Replace(treasuresTotalVariable, PlayerManager.Manager.fullTreasureInventory.Length.ToString());
+        finalText = finalText.Replace(treasuresUnlockedVariable, PlayerManager.Manager.GetUnlockedTreasures().ToString());
         return finalText;
     }
     
+     
+
 }

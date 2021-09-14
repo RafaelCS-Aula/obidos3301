@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
 
     
     public Treasure[] fullTreasureInventory = new Treasure[20];
+    public Sprite lockedTreasureSprite;
 
     public MenuState InventoryMenuState;
 
@@ -60,6 +61,20 @@ public class PlayerManager : MonoBehaviour
         }
 
         Debug.Log("No treasure of that name on the inventory");
+
+    }
+
+    public int GetUnlockedTreasures()
+    {
+        int count = 0;
+
+        foreach(Treasure t in fullTreasureInventory)
+        {
+            if (t.Unlocked)
+                count++;
+        }
+
+        return count;
 
     }
 }

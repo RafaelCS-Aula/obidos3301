@@ -12,9 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd7ac66e35a7bf4baf1f1225641a05e, type: 3}
   m_Name: SlidingPuzzle
   m_EditorClassIdentifier: 
-  SideButtonTargetState: {fileID: 0}
-  _topRightText: 
-  _topLeftText: 
-  _centerButtonText: 
-  _centerButtonTargetState: {fileID: 0}
-  _screenInteractable: {fileID: 0}
+  SideButtonTargetState: {fileID: 11400000, guid: 395f45594330584468c270e640ba645c, type: 2}
+  _topRightText: Sliding Puzzle
+  _topLeftText: Agent >player
+  _centerButtonText: Return to Map
+  _centerButtonTargetState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
+  _screenInteractable: {fileID: 2137917771128197742, guid: b6b43efc2570c38448ec3e0793a5f5e9, type: 3}
