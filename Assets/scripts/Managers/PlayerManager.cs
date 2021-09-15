@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
                     playerScore += t.ScoreValue;
                     displayedText += "UNLOCKED: "+ t.TreasureName + " \n";
                     t.Unlocked = true;
-                    t.Hidden = false;
+                  
 
                 }
                 displayedText += t.TreasureLore;
@@ -71,6 +71,20 @@ public class PlayerManager : MonoBehaviour
         foreach(Treasure t in fullTreasureInventory)
         {
             if (t.Unlocked)
+                count++;
+        }
+
+        return count;
+
+    }
+
+    public int GetTotalNotHiddenTreasures()
+    {
+        int count = 0;
+
+        foreach (Treasure t in fullTreasureInventory)
+        {
+            if (!t.Hidden)
                 count++;
         }
 

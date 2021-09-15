@@ -504,7 +504,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   MainControlMenuDocument: {fileID: 1167439682}
   DialogueMenuDocument: {fileID: 143851464}
-  _initialState: {fileID: 11400000, guid: b98e34a46a92db14ab676a146c2b3571, type: 2}
+  _initialState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
 --- !u!4 &1447558604
 Transform:
   m_ObjectHideFlags: 0
@@ -532,14 +532,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerScore: 0
-  playerName: Obama
+  playerName: Obamium
   fullTreasureInventory:
   - {fileID: 11400000, guid: a5002d5a29f1d0d4ebb6c4633c37270e, type: 2}
   - {fileID: 11400000, guid: 9eee89f3d17a4fc4488cb712dc1f37bf, type: 2}
   - {fileID: 11400000, guid: fb7ae9a927b61ac46b6cefe82f4220f7, type: 2}
   - {fileID: 11400000, guid: a95b50dad1888484f97d74f320be329a, type: 2}
   - {fileID: 11400000, guid: 1b2b8248a14fccd44ae9be0f17e64a52, type: 2}
-  lockedTreasureSprite: {fileID: -7045287644835032355, guid: 22057b01c7a53c249b8d2a0c56d1f0b1, type: 3}
+  lockedTreasureSprite: {fileID: 21300000, guid: 6d52533213a2d8c4a97d70f51f94ade8, type: 3}
   InventoryMenuState: {fileID: 11400000, guid: b98e34a46a92db14ab676a146c2b3571, type: 2}
 --- !u!1 &1472535552
 GameObject:

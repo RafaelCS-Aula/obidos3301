@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25d792f41ddda2c4db7359035dd9c878, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  treasureReward: {fileID: 11400000, guid: a5002d5a29f1d0d4ebb6c4633c37270e, type: 2}
+  treasureReward: {fileID: 11400000, guid: 9eee89f3d17a4fc4488cb712dc1f37bf, type: 2}
   nextGame: {fileID: 0}
   OnGameComplete:
     m_PersistentCalls:

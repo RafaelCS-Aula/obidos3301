@@ -9,6 +9,7 @@ public class ScreenStateUpdater : MonoBehaviour
     public static ScreenStateUpdater Manager;
     public UIDocument MainControlMenuDocument;
     public UIDocument DialogueMenuDocument;
+    
 
     [SerializeField] private MenuState _initialState;
     
@@ -162,7 +163,7 @@ public class ScreenStateUpdater : MonoBehaviour
 
         string finalText = originalText.Replace(playerNameVariable, PlayerManager.Manager.playerName);
         finalText = finalText.Replace(playerScoreVariable,PlayerManager.Manager.playerScore.ToString());
-        finalText = finalText.Replace(treasuresTotalVariable, PlayerManager.Manager.fullTreasureInventory.Length.ToString());
+        finalText = finalText.Replace(treasuresTotalVariable, PlayerManager.Manager.GetTotalNotHiddenTreasures().ToString());
         finalText = finalText.Replace(treasuresUnlockedVariable, PlayerManager.Manager.GetUnlockedTreasures().ToString());
         return finalText;
     }

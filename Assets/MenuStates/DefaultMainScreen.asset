@@ -17,4 +17,4 @@ MonoBehaviour:
   _topLeftText: 'Agent: >player'
   _centerButtonText: Scan QR
   _centerButtonTargetState: {fileID: 11400000, guid: 9870157111dd08c40b7b462af8b89f20, type: 2}
-  _screenInteractable: {fileID: 0}
+  _screenInteractable: {fileID: 6322233119771729769, guid: 21859439589764240b85203dd5588508, type: 3}

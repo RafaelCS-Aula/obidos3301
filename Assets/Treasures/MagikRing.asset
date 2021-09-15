@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _scoreVale: 100
   _treasureName: Magic Ring
-  _treasureLore: 
-  _treasureIcon: {fileID: 7622277309764017006, guid: 22057b01c7a53c249b8d2a0c56d1f0b1, type: 3}
-  _treasurePrefab: {fileID: 0}
+  _treasureLore: A magic ring dug up in the underground ruins of Obidos
+  _treasureIcon: {fileID: 7960038367845498682, guid: 22057b01c7a53c249b8d2a0c56d1f0b1, type: 3}
+  _treasurePrefab: {fileID: 641938887558487635, guid: 1a8fa77c572998f48998f3401b132caf, type: 3}
   Unlocked: 1
   Hidden: 0

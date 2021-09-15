@@ -17,5 +17,5 @@ MonoBehaviour:
   _treasureLore: 
   _treasureIcon: {fileID: -4255651771927157371, guid: 22057b01c7a53c249b8d2a0c56d1f0b1, type: 3}
   _treasurePrefab: {fileID: 0}
-  Unlocked: 1
+  Unlocked: 0
   Hidden: 0
