@@ -29,17 +29,8 @@ public class InventoryUIDrawer : MonoBehaviour
                     continue;
                 }
                 GameObject newButton = Instantiate(baseInventoryButton, transform);
-                Button btnComponent = newButton.GetComponent<Button>();
                 Image imgComponent = newButton.GetComponent<Image>();
-                RectTransform rectComponent = newButton.GetComponent<RectTransform>();
-                Rect rect = rectComponent.rect;
 
-                float btnSize = canvasRect.rect.width / itemsPerRow;
-               // rect.width = btnSize;
-               // rect.height = btnSize;
-
-                // rect.x = (btnSize * x);
-                // rect.y = (btnSize * y);
 
                 try
                 {
