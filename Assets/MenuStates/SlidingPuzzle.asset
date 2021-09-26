@@ -17,4 +17,4 @@ MonoBehaviour:
   _topLeftText: Agent >player
   _centerButtonText: Return to Map
   _centerButtonTargetState: {fileID: 11400000, guid: 93146af1cbdacfc4b88a3ffca438c95d, type: 2}
-  _screenInteractable: {fileID: 2137917771128197742, guid: b6b43efc2570c38448ec3e0793a5f5e9, type: 3}
+  _screenInteractable: {fileID: 4713276720489827609, guid: 963ffd3371790914bb6b3009a8368f8b, type: 3}

@@ -25,6 +25,15 @@ public class SlidingPuzzleMiniGame : MiniGame
 
 
     public GameObject baseTileButton;
+
+    public bool shuffle = true;
+    private GameObject emptyDummy;
+
+    private void Start()
+    {
+        SetupGame();
+    }
+
     public override void SetupGame()
     {
         boardTiles = new SlidingPuzzleTile[(boardSize * boardSize) - 1];
@@ -36,17 +45,20 @@ public class SlidingPuzzleMiniGame : MiniGame
       
 
         // Populate the board
-        Vector2 emptyTile = new Vector2(boardSize - 1, boardSize - 1);
+        Vector2 emptyTileCoords = new Vector2(boardSize - 1, boardSize-1);
+       // SlidingPuzzleTile emptyTile = new SlidingPuzzleTile(emptyTileCoords, boardSize, nu);
 
         int placedTileCount = 0;
 
+        print(boardSize);
         for(int y = 0; y < boardSize; y++)
         {
             for(int x = 0; x < boardSize; x++)
             {
-                if (x == emptyTile.x && y == emptyTile.y)
+                if (x == emptyTileCoords.x && y == emptyTileCoords.y)
                 {
                     occupationGrid[x, y] = false;
+                    print("Placed empty at: " + x + y);
                     continue;
                 }
                     
@@ -57,31 +69,59 @@ public class SlidingPuzzleMiniGame : MiniGame
                     new Vector2(_boardImages[placedTileCount].width / 2, _boardImages[placedTileCount].height / 2));
 
 
-                SlidingPuzzleTile tile = new SlidingPuzzleTile(new Vector2(x, y));
+                SlidingPuzzleTile tile = new SlidingPuzzleTile(new Vector2(x, y),boardSize,btn);
                 boardTiles[placedTileCount] = tile;
                 btn.GetComponent<Button>().onClick.AddListener(tile.TryMove);
+                btn.name = $"Tile: {tile.gridSolutionPosition} , child Index: {tile.GetChildIndex()}";
                 occupationGrid[x, y] = true;
                 placedTileCount++;
+                
 
             }
 
         }
+
 
         //Shuffle board
-        System.Array.Sort(boardTiles, (x,y) => Random.Range(-1, 1));
 
-        int counter = 0;
-        for(int y = 0; y < boardSize; y++)
+        if (shuffle)
         {
-            for(int x = 0; x < boardSize; x++)
+            System.Array.Sort(boardTiles, (x, y) => Random.Range(-1, 1));
+
+            int counter = 0;
+            for (int y = 0; y < boardSize; y++)
             {
-                boardTiles[0].gridCurrentPosition = new Vector2(x, y);
-                counter++;
+                for (int x = 0; x < boardSize; x++)
+                {
+                    if (counter >= boardTiles.Length)
+                        continue;
+                   // print("shuffling tile at index" + counter);
+                    boardTiles[counter].gridCurrentPosition = new Vector2(x, y);
+
+
+
+                    counter++;
+                }
             }
+
         }
-     
+       
+
+        //Add a dummy empty tile
+        emptyDummy = Instantiate(baseTileButton, this.transform);
+        emptyDummy.GetComponent<Button>().enabled = false;
+        emptyDummy.GetComponent<Image>().enabled = false;
+
+        //Place the Tiles according to their shuffling
+        foreach (SlidingPuzzleTile t in boardTiles)
+        {
+            t.inWorldTile.transform.SetSiblingIndex(t.GetChildIndex());
+            t.emptyDummy = emptyDummy;
+        }
 
     }
+
+
 
 
 
@@ -90,9 +130,23 @@ public class SlidingPuzzleMiniGame : MiniGame
     {
         base.Update();
 
+        if (CheckVictory())
+            WinGame();
+                
+
     }
 
 
+    private bool CheckVictory()
+    {
+        foreach (SlidingPuzzleTile t in boardTiles)
+        {
+            if (t.gridCurrentPosition != t.gridSolutionPosition)
+                return false;
+        }
+
+        return true;
+    }
 
     private Texture2D[] SplitImage(Texture2D fullImage)
     {
@@ -117,4 +171,5 @@ public class SlidingPuzzleMiniGame : MiniGame
         return cells.ToArray();
 
     }
+
 }
