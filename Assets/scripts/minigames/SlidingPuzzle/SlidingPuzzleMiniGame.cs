@@ -29,6 +29,8 @@ public class SlidingPuzzleMiniGame : MiniGame
     public bool shuffle = true;
     private GameObject emptyDummy;
 
+    public GridLayoutGroup grid;
+
     private void Start()
     {
         SetupGame();
@@ -42,6 +44,12 @@ public class SlidingPuzzleMiniGame : MiniGame
 
         occupationGrid = new bool[boardSize, boardSize];
 
+        if(grid != null)
+        {
+            grid.constraintCount = boardSize;
+        }
+       
+        
       
 
         // Populate the board
