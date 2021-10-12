@@ -44,6 +44,7 @@ public class SlidingPuzzleMiniGame : MiniGame
 
         occupationGrid = new bool[boardSize, boardSize];
 
+
         if(grid != null)
         {
             grid.constraintCount = boardSize;

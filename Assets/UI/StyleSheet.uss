@@ -1,21 +1,5 @@
 .center-button-style {
-    background-color: rgba(241, 80, 6, 255);
-    border-left-width: 5px;
-    border-right-width: 5px;
-    border-top-width: 5px;
-    border-bottom-width: 5px;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left-color: rgba(38, 9, 4, 255);
-    border-right-color: rgba(38, 9, 4, 255);
-    border-top-color: rgba(38, 9, 4, 255);
-    border-bottom-color: rgba(38, 9, 4, 255);
-}
-
-.center-button-style:hover {
-    background-color: rgba(245, 118, 59, 255);
+    background-color: rgb(241, 80, 6);
     border-left-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;
@@ -30,20 +14,38 @@
     border-bottom-color: rgb(38, 9, 4);
 }
 
-.center-button-style:active {
-    background-color: rgba(38, 9, 4, 255);
+.center-button-style:hover {
+    background-color: rgb(245, 118, 59);
     border-left-width: 5px;
     border-right-width: 5px;
     border-top-width: 5px;
     border-bottom-width: 5px;
-    border-left-color: rgba(38, 9, 4, 255);
-    border-right-color: rgba(38, 9, 4, 255);
-    border-top-color: rgba(38, 9, 4, 255);
-    border-bottom-color: rgba(38, 9, 4, 255);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
+    border-left-color: rgb(38, 9, 4);
+    border-right-color: rgb(38, 9, 4);
+    border-top-color: rgb(38, 9, 4);
+    border-bottom-color: rgb(38, 9, 4);
+    -unity-background-image-tint-color: rgba(144, 144, 144, 255);
+}
+
+.center-button-style:active {
+    background-color: rgb(38, 9, 4);
+    border-left-width: 5px;
+    border-right-width: 5px;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-left-color: rgb(38, 9, 4);
+    border-right-color: rgb(38, 9, 4);
+    border-top-color: rgb(38, 9, 4);
+    border-bottom-color: rgb(38, 9, 4);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    -unity-background-image-tint-color: rgba(36, 36, 36, 255);
 }
 
 .side-button-style {
@@ -54,7 +56,7 @@
     border-right-color: rgb(0, 0, 0);
     border-top-color: rgb(0, 0, 0);
     border-bottom-color: rgb(0, 0, 0);
-    background-color: rgba(241, 80, 6, 255);
+    background-color: rgb(241, 80, 6);
     border-top-left-radius: 6px;
     border-bottom-left-radius: 6px;
     border-top-right-radius: 6px;

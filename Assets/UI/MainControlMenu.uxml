@@ -8,11 +8,11 @@
         <ui:VisualElement name="bottom" style="bottom: auto; width: 100%; height: 20%; flex-direction: column-reverse; left: auto; top: 60%; right: auto; flex-basis: auto; visibility: visible; display: flex;">
             <ui:VisualElement name="button-container-element" style="height: 100%; width: 100%; align-items: center; justify-content: space-between; background-color: rgb(217, 184, 150);">
                 <ui:Label text="Scan QR" display-tooltip-when-elided="true" name="button-label" style="left: auto; justify-content: flex-start; -unity-text-align: upper-center; height: 100%; font-size: 18px; width: 100%; color: rgb(0, 0, 0); border-left-width: 3px; border-right-width: 3px; border-top-width: 3px; border-bottom-width: 3px; border-left-color: rgb(56, 28, 10); border-right-color: rgb(56, 28, 10); border-top-color: rgb(56, 28, 10); border-bottom-color: rgb(56, 28, 10);" />
-                <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" name="central-button" class="center-button-style" style="-unity-text-align: middle-center; height: 60%; left: 0; top: auto; bottom: 70%; right: auto; position: relative; flex-direction: column; width: 67px;" />
+                <ui:Button display-tooltip-when-elided="true" enable-rich-text="false" name="central-button" class="center-button-style" style="-unity-text-align: middle-center; height: 60%; left: 0; top: auto; bottom: 70%; right: auto; position: relative; flex-direction: column; width: 67px; background-image: url(&apos;/Assets/UI/icons/central.png&apos;); border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; background-color: rgba(241, 80, 6, 0);" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
     <ui:VisualElement name="side-right" style="align-items: flex-end; width: 10%; position: relative; right: auto; height: 60%; top: 20%; left: 90%;">
-        <ui:Button display-tooltip-when-elided="true" name="side-button" enable-rich-text="false" class="agent-button-style side-button-style" style="align-items: auto; justify-content: space-around;" />
+        <ui:Button display-tooltip-when-elided="true" name="side-button" enable-rich-text="false" class="agent-button-style side-button-style" style="align-items: auto; justify-content: space-around; background-image: url(&apos;/Assets/UI/icons/speech.png&apos;); background-color: rgba(241, 80, 6, 0);" />
     </ui:VisualElement>
 </ui:UXML>

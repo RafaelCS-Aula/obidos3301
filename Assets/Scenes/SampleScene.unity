@@ -539,7 +539,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: fb7ae9a927b61ac46b6cefe82f4220f7, type: 2}
   - {fileID: 11400000, guid: a95b50dad1888484f97d74f320be329a, type: 2}
   - {fileID: 11400000, guid: 1b2b8248a14fccd44ae9be0f17e64a52, type: 2}
-  lockedTreasureSprite: {fileID: 21300000, guid: 6d52533213a2d8c4a97d70f51f94ade8, type: 3}
+  lockedTreasureSprite: {fileID: 21300000, guid: 0cab44b871152a0418fea597a43c1e38, type: 3}
   InventoryMenuState: {fileID: 11400000, guid: b98e34a46a92db14ab676a146c2b3571, type: 2}
 --- !u!1 &1472535552
 GameObject:
